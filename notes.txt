@@ -1,0 +1,48 @@
+double arr[100];
+std::copy(v.begin(), v.end(), arr);//convert vector to array
+
+int data[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 }; 
+ vector<int> primes(data, data+(sizeof(data) / sizeof(data[0]))); //convert array to vector
+
+ int i = (find(v.begin(), v.end(), 49) - v.begin()); //to find any element
+
+ int data[5] = { 1, 5, 2, 4, 3 }; 
+ vector<int> X(data, data+5); 
+ int v1 = *max_element(X.begin(), X.end()); // Returns value of max element in vector 
+ int i1 = min_element(X.begin(), X.end()) – X.begin; // Returns index of min element in vector 
+
+ int v2 = *max_element(data, data+5); // Returns value of max element in array 
+ int i3 = min_element(data, data+5) – data; // Returns index of min element in array 
+
+ Sort function can be used for array as well as vectors.
+ 
+ //Sorting on the basis of second parameter of Pair.
+
+ bool sortBySec(const pair<int,int> &a,const pair<int,int> &b)
+	{
+		return a.second<b.second;
+	}
+//in main()
+
+sort(v.begin(),v.end(),sortBySec);
+
+Since set is not a linear container, it’s impossible to take the element in set by index. Therefore, the only way to traverse the elements of set is to use iterators.
+
+for(set<int>::const_iterator it = S.begin(); it != S.end(); it++) { 
+      r += *it; 
+
+ set<int> s; 
+ // ... 
+ if(s.find(42) != s.end()) { 
+      // 42 presents in set 
+ } 
+ else { 
+      // 42 not presents in set 
+ } 
+
+ vector<int> v; 
+ // … 
+ set<int> s(v.begin(),v.end()); 
+ vector<int> v2(s.begin(),s.end()); 
+
+ Here ‘v2′ will contain the same elements as ‘v’ but sorted in ascending order and with duplicates removed.
