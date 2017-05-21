@@ -26,7 +26,8 @@ int data[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 };
 
 sort(v.begin(),v.end(),sortBySec);
 
-Since set is not a linear container, it’s impossible to take the element in set by index. Therefore, the only way to traverse the elements of set is to use iterators.
+Since set is not a linear container, it’s impossible to take the element in set by index. Therefore, 
+the only way to traverse the elements of set is to use iterators.
 
 for(set<int>::const_iterator it = S.begin(); it != S.end(); it++) { 
       r += *it; 
