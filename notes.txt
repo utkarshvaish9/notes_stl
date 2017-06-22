@@ -47,3 +47,9 @@ for(set<int>::const_iterator it = S.begin(); it != S.end(); it++) {
  vector<int> v2(s.begin(),s.end()); 
 
  Here ‘v2′ will contain the same elements as ‘v’ but sorted in ascending order and with duplicates removed.
+ 
+ for each loop in c++
+ 	suppose arr is an array... to iterate over all its element,
+	for(int i: arr)
+	now i can be used as element of arr...
+ 
