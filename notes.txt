@@ -1,3 +1,23 @@
+most frequent used feature of vector is to report its size.
+
+	int count = v.size();
+to check for vector's emptiness:
+	
+	v.empty();
+To erase the vector
+	v.clear();
+
+If vector needs to be initialized with something else,
+
+	vector<string> names(20,"Unknown");
+
+
+Mostly vectors should not be directly passed to any function as it requires a lot of time and memory to create new vector.To avoid that,pass it like,
+
+	void some_function(const vector<int>& v)
+	if content of vector needs to be changed, we just need to omit const.
+
+
 double arr[100];
 std::copy(v.begin(), v.end(), arr);//convert vector to array
 
@@ -13,6 +33,50 @@ int data[] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 };
 
  int v2 = *max_element(data, data+5); // Returns value of max element in array 
  int i3 = min_element(data, data+5) – data; // Returns index of min element in array 
+
+Each container also has the rbegin()/rend() functions, which return reverse iterators. Reverse iterators are used to traverse the container in backward order
+
+ PAIR
+ 	 
+ 	 pair<string, pair<int,int> > P; 
+ 	 string s = P.first; // extract string 
+ 	 int x = P.second.first; // extract first int 
+ 	 int y = P.second.second; // extract second int 
+
+ 	 pair<char, int>pair1 = make_pair('A', 1);
+
+ 	 // C++ program to demonstrate vector of pairs
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    //declaring vector of pairs
+    vector< pair <int,int> > vect;
+ 
+    // initialising 1st and 2nd element of
+    // pairs with array values
+    int arr[] = {10, 20, 5, 40 };
+    int arr1[] = {30, 60, 20, 50};
+    int n = sizeof(arr)/sizeof(arr[0]);
+ 
+    // Entering values in vector of pairs
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(arr[i],arr1[i]) );
+ 
+    // Printing the vector
+    for (int i=0; i<n; i++)
+    {
+        // "first" and "second" are used to access
+        // 1st and 2nd element of pair respectively
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+ 
+    return 0;
+}
+
+
 
  Sort function can be used for array as well as vectors.
  
@@ -52,4 +116,4 @@ for(set<int>::const_iterator it = S.begin(); it != S.end(); it++) {
  	suppose arr is an array... to iterate over all its element,
 	for(int i: arr)
 	now i can be used as element of arr...
- 
+
