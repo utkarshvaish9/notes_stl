@@ -1,0 +1,61 @@
+	git init
+The word init means initialize. The command sets up all the tools Git needs to begin tracking changes made to the project.The Git project was created.
+
+The Git workflow consists of editing files in the working directory, adding files to the staging area, and saving changes to a Git repository.
+
+To check status of changes made 
+	git status
+
+We can add a file to the staging area with:
+
+	git add filename
+We still need to commit this to make a permanent change.
+
+Since the file is tracked, we can check the differences between the working directory and the staging area with:
+
+	git diff filename
+Staging area content is displayed in white. Changes to the file are marked with a '+' and are indicated in green.
+
+press q on your keyboard to exit diff mode.
+
+A commit is the last step in our Git workflow. A commit permanently stores changes from the staging area inside the repository.
+
+	git commit -m "Complete first line of dialogue"
+
+Often with Git, you'll need to refer back an earlier version of a project. Commits are stored chronologically in the repository and can be viewed with:
+
+	git log
+
+The most recently made commit is the HEAD commit.
+
+	git show HEAD
+
+	git checkout HEAD filename
+will restore the file in your working directory to look exactly as it did when you last made a commit.
+
+If file is on staging area and we see some error at this point, we just remove it from staging to working area by:
+	git reset HEAD filename
+
+TO delete previous some commits:
+	git reset commit_SHA
+	commit_SHA is first 7 char of SHA of that commit which you want to make as new HEAD.
+
+
+To check current branch
+	git branch
+To create new branch 
+	git branch new_branch
+To switch to a new branch
+	git checkout branch_name
+To join branch to master:
+	git merge branch_name 
+	,while being in the master.
+
+	git branch -d branch_name
+deletes the specific branch
+
+git clone: Creates a local copy of a remote.
+git remote -v: Lists a Git project's remotes.
+git fetch: Fetches work from the remote into the local copy.
+git merge origin/master: Merges origin/master into your local branch.
+git push origin <branch_name>: Pushes a local branch to the origin remote.
