@@ -11,6 +11,8 @@ If vector needs to be initialized with something else,
 
 	vector<string> names(20,"Unknown");
 
+using 2-D vector, do not use equal sign to assign value to another vector. Use push_back always to insert entry in vector 
+
 
 Mostly vectors should not be directly passed to any function as it requires a lot of time and memory to create new vector.To avoid that,pass it like,
 
