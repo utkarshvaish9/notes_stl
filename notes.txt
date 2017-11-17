@@ -125,3 +125,18 @@ for(set<int>::const_iterator it = S.begin(); it != S.end(); it++) {
 	for(int i: arr)
 	now i can be used as element of arr...
 
+accumulate method
+	adds element of array
+		accumulate(vec.begin(),vec.end(),0);//0 denotes the starting index
+
+count method
+
+	counts occurence of element in vector.
+		count(vec.begin(),vec.end(),20)//20 being number to be searched.
+
+	vec.erase(unique(arr.begin(),arr.end()),arr.end()) // erases the duplicate occurrences in sorted vector in a single line.
+
+copy_n method
+	copy to some other array from some other array.
+	copy_n(arr, numberOfElementToBeCopied,arr1)
+
