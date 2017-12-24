@@ -185,3 +185,32 @@ int main()
 		cout<<"Not Balanced\n";
 }
 
+
+//Level order traversal using deque();
+
+#include <deque>
+void Solution::connect(TreeLinkNode* A) {
+    deque<TreeLinkNode *> dq;
+    A->next = NULL;
+    dq.push_back(A);
+    dq.push_back(NULL);
+    while(!dq.empty()) {
+        TreeLinkNode *a = dq.front();
+        dq.pop_front();
+        if(a!=NULL) {
+            if(!a->left==NULL) {
+                dq.push_back(a->left);
+            }
+            if(!a->right==NULL) {
+                dq.push_back(a->right);
+            }
+        } else {
+            if(!dq.empty()) {
+                dq.push_back(NULL);
+                for(int i=0; i<dq.size()-1; i++) {
+                dq[i]->next = dq[i+1];
+            }
+            }
+        }
+    }
+}
